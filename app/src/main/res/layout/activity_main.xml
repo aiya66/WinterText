@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@color/gray"
+    tools:context=".MainActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/sp_city"
+        android:layout_width="150dp"
+        android:layout_height="48dp"
+        android:entries="@array/cities"
+        android:spinnerMode="dropdown"
+        android:popupBackground="@color/trans"
+        android:overlapAnchor="false"
+        android:dropDownVerticalOffset="48dp"
+        />
+</RelativeLayout>
+    <ImageView
+        android:id="@+id/iv_weather"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:background="@drawable/yun"/>
+    <TextView
+        android:id="@+id/tv_tem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="50dp"
+        android:text="11°C "
+        android:textColor="@color/white"/>
+    <TextView
+        android:id="@+id/tv_weather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="晴（2025-01-13星期四）"
+        android:textColor="@color/white"
+        android:layout_marginTop="10dp"/>
+    <TextView
+        android:id="@+id/tv_tem_low_high"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="-3°C~12°C"
+        android:textColor="@color/white"
+        android:layout_marginTop="10dp"/>
+    <TextView
+        android:id="@+id/tv_win"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="西南风2级"
+        android:textColor="@color/white"
+        android:layout_marginTop="10dp"/>
+    <TextView
+        android:id="@+id/tv_air"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="空气:44优\n天气好，适宜外出"
+        android:textColor="@color/white"
+        android:layout_marginTop="10dp"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rlv_future_weather"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>
